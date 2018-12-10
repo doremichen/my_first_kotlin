@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">MYFirstKotlin</string>
+    <string name="btn_label_action1">Action1</string>
+    <string name="menu_label_option1">Option1</string>
+    <string name="btn_lable_start_activity">Start activity</string>
+    <string name="label_hint_input_text">Input text</string>
+    <string name="label_info_activity2">Activity2</string>
+    <string name="radio_label_title1">Title1:</string>
+    <string name="radio_button1_item1">item1</string>
+    <string name="radio_button2_item2">item2</string>
+    <string name="radio_button_item3">item3</string>
+    <string name="label_toast_infomation">Toast infomation</string>
+</resources>
