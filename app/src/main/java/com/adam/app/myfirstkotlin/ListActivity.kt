@@ -42,7 +42,7 @@ class ListActivity : AppCompatActivity() {
                 }
                 items[items.size - 1] -> {
                     // exit
-                    finish();
+                    finish()
                 }
 
             }
