@@ -10,4 +10,7 @@
     <string name="radio_button2_item2">item2</string>
     <string name="radio_button_item3">item3</string>
     <string name="label_toast_infomation">Toast infomation</string>
+    <string name="label_show_thread_state">Thread State:</string>
+    <string name="label_btn_start">Start</string>
+    <string name="label_btn_stop">Stop</string>
 </resources>

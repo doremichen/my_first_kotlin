@@ -1,5 +1,6 @@
 package com.adam.app.myfirstkotlin
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -10,7 +11,7 @@ import kotlinx.android.synthetic.main.list_layout.*
 
 class ListActivity : AppCompatActivity() {
 
-   private val items: Array<String> = arrayOf("One", "Two", "Three")
+   private val items: Array<String> = arrayOf("Demo UI", "Demo thread", "Exit")
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,6 +29,24 @@ class ListActivity : AppCompatActivity() {
             val selectedItem = parent.getItemAtPosition(position) as String
             Log.i("Demo", "List item $selectedItem is clicked")
             Utils.showToast(this, "List item: $selectedItem is clicked")
+            var temp = items[0]
+            Log.i("Demo", "$selectedItem $temp ")
+            when (selectedItem) {
+                items[0] -> {
+                    var intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                }
+                items[1] -> {
+                    var intent = Intent(this, ThreadActivity::class.java)
+                    startActivity(intent)
+                }
+                items[items.size - 1] -> {
+                    // exit
+                    finish();
+                }
+
+            }
+
         }
 
     }
