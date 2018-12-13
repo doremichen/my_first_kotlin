@@ -2,8 +2,8 @@ package com.adam.app.myfirstkotlin
 
 import android.content.Intent
 import android.graphics.Color
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         when (item?.itemId) {
-            R.id.option1-> {
+            R.id.option1 -> {
                 Toast.makeText(this, "this is option1", Toast.LENGTH_SHORT).show()
                 this.finish()
             }
@@ -80,15 +80,15 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun onShowDlg(v:View) {
+    fun onShowDlg(v: View) {
         Utils.showDialog(this, "Test", "This is test alett dialog")
     }
 
-    fun onSowCustToast(v : View) {
+    fun onSowCustToast(v: View) {
         Utils.showCustToast(this, "I am cust toast")
     }
 
-    fun onShowSnack(v : View) {
+    fun onShowSnack(v: View) {
         main_layout.setBackgroundColor(Color.GREEN)
 
         Utils.showSnack(main_layout, "This is snack bar")

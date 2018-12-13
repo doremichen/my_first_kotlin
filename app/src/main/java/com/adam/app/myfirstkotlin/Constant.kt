@@ -17,17 +17,17 @@ class Utils {
         val RESLUT_CODE = 0x1234
         val REQEUST_CODE = 0x2468
 
-        fun showDialog(ctx:Context, str1:String, str2:String) {
+        fun showDialog(ctx: Context, str1: String, str2: String) {
             var alert_dialog = AlertDialog.Builder(ctx)
             alert_dialog.setTitle(str1)
             alert_dialog.setMessage(str2)
-            alert_dialog.setPositiveButton("Ok", {_, _ ->  println("Ok test")})
+            alert_dialog.setPositiveButton("Ok", { _, _ -> println("Ok test") })
             val dialog = alert_dialog.create()
             // Show dialog
             dialog.show()
         }
 
-        fun showCustToast(ctx:Context, msg:String) {
+        fun showCustToast(ctx: Context, msg: String) {
             val toast = Toast(ctx)
             toast.setGravity(Gravity.CENTER, 0, 0)
             toast.duration = Toast.LENGTH_LONG
@@ -47,7 +47,7 @@ class Utils {
             }).show()
         }
 
-        fun showToast(ctx:Context, msg:String) {
+        fun showToast(ctx: Context, msg: String) {
             Toast.makeText(ctx, msg, Toast.LENGTH_LONG).show()
         }
     }

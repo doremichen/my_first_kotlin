@@ -1,8 +1,8 @@
 package com.adam.app.myfirstkotlin
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.view.View
 import kotlinx.android.synthetic.main.activity_other_activity1.*
 
@@ -13,7 +13,7 @@ class OtherActivity1 : AppCompatActivity() {
 
         val data = Bundle()
 
-        when(checkId) {
+        when (checkId) {
             R.id.radioBtn1 -> {
                 data.putString(Utils.RADIO_KEY, "iTem1")
             }

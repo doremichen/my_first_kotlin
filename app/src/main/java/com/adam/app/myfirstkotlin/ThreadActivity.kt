@@ -1,9 +1,9 @@
 package com.adam.app.myfirstkotlin
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Message
+import android.support.v7.app.AppCompatActivity
 import android.view.View
 import kotlinx.android.synthetic.main.activity_thread.*
 
@@ -15,11 +15,11 @@ class ThreadActivity : AppCompatActivity() {
 
     private var mStop = false
 
-    private lateinit var mWorkTask:Thread
+    private lateinit var mWorkTask: Thread
 
 
     // Create UI handler
-    val mHandler = object: Handler() {
+    val mHandler = object : Handler() {
         override fun handleMessage(msg: Message?) {
             super.handleMessage(msg)
             when (msg?.what) {
@@ -44,7 +44,7 @@ class ThreadActivity : AppCompatActivity() {
         stop_thread.isEnabled = false
     }
 
-    fun Start(v:View) {
+    fun Start(v: View) {
 
         mWorkTask = Thread {
             run {

@@ -29,6 +29,10 @@
                 android:name=".ThreadActivity"
                 android:label="Run Thread activity">
         </activity>
+        <activity
+                android:name=".ReceiverActivity"
+                android:label="Demo receiver">
+        </activity>
     </application>
 
 </manifest>

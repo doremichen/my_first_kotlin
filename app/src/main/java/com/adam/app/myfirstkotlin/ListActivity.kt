@@ -1,17 +1,16 @@
 package com.adam.app.myfirstkotlin
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.widget.AdapterView
-import android.widget.AdapterView.OnItemClickListener
 import android.widget.ArrayAdapter
 import kotlinx.android.synthetic.main.list_layout.*
 
 class ListActivity : AppCompatActivity() {
 
-   private val items: Array<String> = arrayOf("Demo UI", "Demo thread", "Exit")
+    private val items: Array<String> = arrayOf("Demo UI", "Demo thread", "Demo receiver", "Exit")
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,8 +23,7 @@ class ListActivity : AppCompatActivity() {
         // build list
         list_view.adapter = adapter
 
-        list_view.onItemClickListener = AdapterView.OnItemClickListener {
-            parent, view, position, id ->
+        list_view.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
             val selectedItem = parent.getItemAtPosition(position) as String
             Log.i("Demo", "List item $selectedItem is clicked")
             Utils.showToast(this, "List item: $selectedItem is clicked")
@@ -38,6 +36,10 @@ class ListActivity : AppCompatActivity() {
                 }
                 items[1] -> {
                     var intent = Intent(this, ThreadActivity::class.java)
+                    startActivity(intent)
+                }
+                items[2] -> {
+                    var intent = Intent(this, ReceiverActivity::class.java)
                     startActivity(intent)
                 }
                 items[items.size - 1] -> {
